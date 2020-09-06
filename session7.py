@@ -22,7 +22,10 @@ type(fib_tester)
 """
 
 
-def question_2_1(iter1,iter2):
+def question_2_1(iter1 : list ,iter2 : list) ->  list: 
+    """
+    Add 2 iterables a and b such that a is even and b is odd
+    """
     Result_2_1 = [a + b for a , b in zip(iter1,iter2) if (a%2 == 0) and (b%2 != 0)]  
     return(Result_2_1)
 
