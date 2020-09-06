@@ -27,3 +27,18 @@ iter2 = [random.randint(0 , 100) for x in range(10)]
 Result_2_1 = [a + b for a , b in zip(iter1,iter2) if (a%2 == 0) and (b%2 != 0)]
 
 ```
+
+### Question 2.2 : Using list comprehension (and zip/lambda/etc if required) write an expression that strips every vowel from a string provided (tsai>>t s)
+
+```
+input_string = 'sagar'
+
+#### An expression that strips every vowel from a string provided
+print("".join([x if x.lower() not in ['a', 'e' , 'i' ,'o','u'] else " " for x in input_string]))
+
+#### Output : s g r
+```
+
+### Question 2.3 : Using list comprehension (and zip/lambda/etc if required) write an expression that acts like a ReLU function for a 1D array
+
+!()[https://www.techvariable.com/wp-content/uploads/2018/11/7nn.png]
