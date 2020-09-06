@@ -42,3 +42,25 @@ print("".join([x if x.lower() not in ['a', 'e' , 'i' ,'o','u'] else " " for x in
 ### Question 2.3 : Using list comprehension (and zip/lambda/etc if required) write an expression that acts like a ReLU function for a 1D array
 
 ![](https://www.techvariable.com/wp-content/uploads/2018/11/7nn.png)
+
+```
+Relu_input = [random.randint(-100 , 100) for x in range(10)]
+print(Relu_input)
+
+#### Clipping the negative inputs and fixing them to zero
+print([x if x>0 else 0 for x in Relu_input ])
+```
+
+#### Question 2.3 : Using list comprehension (and zip/lambda/etc if required) write an expression that acts like a Sigmoid function for a 1D array
+
+![](https://github.com/sagar9926/session7-sagar9926/blob/master/sigmoid.png)
+
+```
+
+Sigmoid_input = [random.random() for x in range(10)]
+print(Sigmoid_input)
+
+#### Sigmoid implementation
+print([1 / (1 + exp(-x)) if x>0 else 0  for x in Sigmoid_input  ])
+
+```
