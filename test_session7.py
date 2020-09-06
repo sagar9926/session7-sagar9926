@@ -68,7 +68,7 @@ def test_shift_alphabets():
     assert session7.shift_alphabets(input_string) == 'yxfn' , "Shift alphabets is not working properly"
     
 def test_swear_detection():
-    f = open("Paragraph.txt",'r')
+    f = open("Paragraph.txt",'r',encoding = "utf-8")
     Paragraph = f.read()
     f.close()
     Paragraph = set(Paragraph.split())
