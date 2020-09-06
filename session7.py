@@ -59,7 +59,7 @@ def shift_alphabets(input_string):
 ##https://github.com/RobertJGabriel/Google-profanity-words/blob/master/list.txt PTS:200
 
 def swear_detection(Paragraph):
-    f = open("Swear_Words.txt",'r')
+    f = open("Swear_Words.txt",'r',encoding = "utf-8")
     Swear_Words = f.read()
     f.close()
     Swear_Words = set(Swear_Words.split())
