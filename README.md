@@ -98,5 +98,30 @@ print(any([x for x in Swear_Words if x in Paragraph]))
 
 ```
 
+### Question 4.1 : Using reduce function add only even numbers in a list.
+
+```
+#### Generating a list of random numbers
+list1 = [random.randint(0,100) for x in range(10)]
+print(list1)
+
+#### Adding only even numbers in a list.
+print(reduce(lambda a,b : a + b if b%2 == 0 else a ,list1))
+
+```
+### Question 4.2 : Using reduce function find the biggest character in a string.
+
+```
+#### Creating randomly a string that contains printable characters
+sample_string = "".join([string.printable[random.randint(0,100)] for x in range(10)])
+print(sample_string)
+
+#### finding the biggest character in a string.
+print(reduce(lambda a,b : a if ord(a) > ord(b) else b ,sample_string))
+
+```
+
+
+
 
 
