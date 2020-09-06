@@ -102,7 +102,7 @@ def add_only_even(list1 : list) -> int:
 """
 
 
-def biggest_character(sample_string : str) -> char :
+def biggest_character(sample_string : str) -> str:
     """
     This function returns the biggest character in a string
     """
