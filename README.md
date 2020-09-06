@@ -51,7 +51,7 @@ print(Relu_input)
 print([x if x>0 else 0 for x in Relu_input ])
 ```
 
-#### Question 2.3 : Using list comprehension (and zip/lambda/etc if required) write an expression that acts like a Sigmoid function for a 1D array
+### Question 2.4 : Using list comprehension (and zip/lambda/etc if required) write an expression that acts like a Sigmoid function for a 1D array
 
 ![](https://github.com/sagar9926/session7-sagar9926/blob/master/sigmoid.png)
 
@@ -64,3 +64,39 @@ print(Sigmoid_input)
 print([1 / (1 + exp(-x)) if x>0 else 0  for x in Sigmoid_input  ])
 
 ```
+
+### Question 2.5 : Using list comprehension (and zip/lambda/etc if required) write an expression that takes a small character string and shifts all characters by 5 (handle boundary conditions) tsai>>yxfn
+
+```
+input_string = 'tsai'
+
+#### Expression that takes a small character string and shifts all characters by 5
+print("".join([chr(ord(x) + 5 ) if ord(x) <= 117 else chr(96 + 5 - 122 - ord(x))  for x in input_string]))
+
+```
+
+### Question 3 : A list comprehension expression that takes a ~200 word paragraph, and checks whether it has any of the swear words mentioned in https://github.com/RobertJGabriel/Google-profanity-words/blob/master/list.txt PTS:200
+
+```
+#### Reading the data from file containing Swear texts
+f = open("Swear_Words.txt",'r')
+Swear_Words = f.read()
+f.close()
+
+Swear_Words = set(Swear_Words.split())
+
+
+#### Reading the data from file containing Paragraph texts
+f = open("Paragraph.txt",'r')
+Paragraph = f.read()
+f.close()
+
+Paragraph = set(Paragraph.split())
+
+#### A list comprehension expression that takes a ~200 word paragraph, and checks whether it has any of the swear words
+print(any([x for x in Swear_Words if x in Paragraph]))
+
+```
+
+
+
