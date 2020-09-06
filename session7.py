@@ -32,21 +32,30 @@ def question_2_1(iter1 : list ,iter2 : list) ->  list:
 """
 2.) strips every vowel from a string provided (tsai>>t s)
 """
-def vowel_strip(input_string):
+def vowel_strip(input_string : str) -> str:
+    """
+    This function strips every vowel from a string provided (tsai>>t s)
+    """
     Vowel_Strip = "".join([x if x.lower() not in ['a', 'e' , 'i' ,'o','u'] else " " for x in input_string])
     return(Vowel_Strip)
 
 """
 3.) acts like a ReLU function for a 1D array
 """
-def relu(Relu_input):
+def relu(Relu_input : list) -> list:
+    """
+    This function applies Relu activation on each and every element of array and returns a list
+    """
     Relu =  [x if x>0 else 0 for x in Relu_input]
     return(Relu)
 
 """
 4.) acts like a sigmoid function for a 1D array
 """
-def sigmoid(Sigmoid_input):
+def sigmoid(Sigmoid_input : list) -> list:
+    """
+    This function applies Sigmoid activation on each and every element of array and returns a list
+    """
     Sigmoid = [round(1 / (1 + exp(-x)),2) if x>0 else 0  for x in Sigmoid_input]
     return(Sigmoid)
 
@@ -54,14 +63,20 @@ def sigmoid(Sigmoid_input):
 """
 5.) takes a small character string and shifts all characters by 5 (handle boundary conditions) tsai>>yxfn
 """
-def shift_alphabets(input_string):
+def shift_alphabets(input_string : str) -> str :
+    """
+    this function takes a small character string and shifts all characters by 5 (handle boundary conditions) tsai>>yxfn
+    """
     Shift_ALphabets = "".join([chr(ord(x) + 5 ) if ord(x) <= 117 else chr(96 + 5 - 122 - ord(x))  for x in input_string])
     return(Shift_ALphabets)
 
 ## A list comprehension expression that takes a ~200 word paragraph, and checks whether it has any of the swear words mentioned in 
 ##https://github.com/RobertJGabriel/Google-profanity-words/blob/master/list.txt PTS:200
 
-def swear_detection(Paragraph):
+def swear_detection(Paragraph : str) -> bool :
+    """
+    This functioun outputs a bool value , True if swear words are present in Paragraph else false
+    """
     f = open("Swear_Words.txt",'r',encoding = "utf-8")
     Swear_Words = f.read()
     f.close()
@@ -75,7 +90,10 @@ def swear_detection(Paragraph):
 """
 1.) add only even numbers in a list
 """
-def add_only_even(list1):
+def add_only_even(list1 : list) -> int:
+    """
+    This function calculates the sum of all even numbers in a list
+    """
     Add_only_even = reduce(lambda a,b : a + b if b%2 == 0 else a ,list1,0)
     return(Add_only_even)
 
@@ -84,7 +102,10 @@ def add_only_even(list1):
 """
 
 
-def biggest_character(sample_string):
+def biggest_character(sample_string : str) -> char :
+    """
+    This function returns the biggest character in a string
+    """
     Biggest_Character = reduce(lambda a,b : a if ord(a) > ord(b) else b ,sample_string)
     return(Biggest_Character)
 
@@ -92,7 +113,10 @@ def biggest_character(sample_string):
 """
 3.) adds every 3rd number in a list
 """
-def add_every_third(list1):
+def add_every_third(list1 : list) -> int:
+    """
+    This function adds every third number in the list
+    """
     z = list(zip( list(range(1,len(list1) + 1)) , list1))
     Add_Every_Third = reduce(lambda a , b : a + b, [item[1] for item in list(filter(lambda  x : True if x[0]%3 == 0 else False ,z))])
     return(Add_Every_Third)
