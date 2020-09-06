@@ -41,4 +41,4 @@ print("".join([x if x.lower() not in ['a', 'e' , 'i' ,'o','u'] else " " for x in
 
 ### Question 2.3 : Using list comprehension (and zip/lambda/etc if required) write an expression that acts like a ReLU function for a 1D array
 
-!()[https://www.techvariable.com/wp-content/uploads/2018/11/7nn.png]
+![](https://www.techvariable.com/wp-content/uploads/2018/11/7nn.png)
